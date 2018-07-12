@@ -11,6 +11,10 @@ import { ItemListComponent } from './components/item-list/item-list.component';
     CommonModule,
     ItemRoutingModule
   ],
-  declarations: [ItemComponent, ItemAddComponent, ItemListComponent]
+  declarations: [
+    ItemComponent,
+    ItemAddComponent,
+    ItemListComponent
+  ]
 })
 export class ItemModule { }
