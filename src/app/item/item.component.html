@@ -1,2 +1,23 @@
-<h4>Item Container</h4>
-<router-outlet></router-outlet>
+<div class="ui-widget-header">
+  <p-toolbar>
+    <div class="ui-toolbar-group-left">
+      <img src="../../assets/TEXO_IT_RGB_DIGITAL.png" alt="Texo IT Logo">
+      <button class="ui-button-success" type="button" (click)="display = true" style="display: inline-block">Open Sidebar</button>
+    </div>
+  </p-toolbar>
+</div>
+
+<div class="ui-widget-content tx-content">
+  <div class="ui-g ui-fluid">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<p-sidebar [(visible)]="display">
+  <div class="sidebar">
+      <img src="../../assets/TEXO_IT_RGB_DIGITAL.png" alt="Texo IT Logo">
+    <a class="sidebar__item" href="">Link 1</a>
+    <a class="sidebar__item" href="">Link 2</a>
+  </div>
+</p-sidebar>
+
