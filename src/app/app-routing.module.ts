@@ -18,7 +18,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'list', pathMatch: 'full' },
       { path: 'list', component: ItemListComponent },
       { path: 'add', component: ItemAddComponent },
-      { path: 'edit', component: ItemAddComponent }
+      { path: ':id', component: ItemAddComponent }
     ]
   }
 ];

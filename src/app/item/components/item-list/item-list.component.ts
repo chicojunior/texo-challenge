@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Item } from '../../shared/item';
 
@@ -12,7 +13,7 @@ export class ItemListComponent implements OnInit {
 
   itens: Item[] = [];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     const arroz = new Item();
@@ -29,6 +30,10 @@ export class ItemListComponent implements OnInit {
 
     this.itens.push(arroz);
     this.itens.push(feijao);
+  }
+
+  addItem() {
+    this.router.navigate(['itens/add']);
   }
 
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-item-add',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemAddComponent implements OnInit {
 
-  constructor() { }
+  faCoffee = faCoffee;
+
+  constructor(private location: Location) { }
 
   ngOnInit() {
+  }
+
+  back() {
+    console.log('clicked');
+    this.location.back();
   }
 
 }

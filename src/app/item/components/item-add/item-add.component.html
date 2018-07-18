@@ -1,9 +1,42 @@
-<p-header>
-  <div class="ui-widget ui-helper-clearfix">
-    <div class="ui-g">
-      <h3>Novo Item</h3>
-    </div>
+<div class="ui-widget ui-helper-clearfix">
+  <div class="ui-g">
+    <button class="back-button" type="button" (click)="back()"><i class="fas fa-arrow-left"></i></button>
+    <h3>Novo Item</h3>
   </div>
-</p-header>
+
+  <div class="ui-g">
+
+    <div class="ui-g-12 ui-md-4 form-field">
+      <label for=""><strong>Nome</strong></label>
+      <input type="text" pInputText />
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <label for=""><strong>Unidade de Medida</strong></label>
+      <div class="ui-g radiobuttons">
+        <div class="ui-g-12">
+          <p-radioButton name="group1" value="Option 1"></p-radioButton>
+          <label class="ui-widget">Litro</label>
+        </div>
+        <div class="ui-g-12">
+          <p-radioButton name="group1" value="Option 2"></p-radioButton>
+          <label class="ui-widget">Quilograma</label>
+        </div>
+        <div class="ui-g-12">
+          <p-radioButton name="group1" value="Option 3"></p-radioButton>
+          <label class="ui-widget">Unidade</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-4 form-field">
+      <label for=""><strong>Quantidade</strong></label>
+      <input type="number" pInputText />
+    </div>
+
+  </div>
+
+</div>
+
 
 
