@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,16 +10,15 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class ItemAddComponent implements OnInit {
 
-  faCoffee = faCoffee;
+  perecivel: boolean;
+  unidadeMedida: string;
 
-  constructor(private location: Location) { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   back() {
-    console.log('clicked');
-    this.location.back();
+    this.router.navigate(['itens/list']);
   }
 
 }

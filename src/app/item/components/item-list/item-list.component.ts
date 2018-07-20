@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Item } from '../../shared/item';
+import { ItemService } from '../../shared/item.service';
 
 
 @Component({
@@ -11,25 +12,14 @@ import { Item } from '../../shared/item';
 })
 export class ItemListComponent implements OnInit {
 
-  itens: Item[] = [];
+  itens: Item[];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private service: ItemService) { }
 
   ngOnInit() {
-    const arroz = new Item();
-    arroz.nomeItem = 'Arroz';
-    arroz.perecivel = false;
-    arroz.preco = 3.75;
-    arroz.dataFabricacao = new Date(2018, (7 - 1), 15);
-
-    const feijao = new Item();
-    feijao.nomeItem = 'Feijão';
-    feijao.perecivel = false;
-    feijao.preco = 5.56;
-    feijao.dataFabricacao = new Date(2018, (7 - 1), 15);
-
-    this.itens.push(arroz);
-    this.itens.push(feijao);
+    this.itens = [];
+    this.service.carregaListaItens(this.itens);
+    console.log(this.itens);
   }
 
   addItem() {

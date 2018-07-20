@@ -10,3 +10,17 @@
     display: block;
   }
 }
+
+input {
+  width: 100%;
+}
+
+.button-group {
+  margin-top: 80px;
+
+  button {
+    width: 300px;
+    margin-right: 20px;
+    float: right;
+  }
+}

@@ -6,6 +6,8 @@ import { SidebarModule } from 'primeng/sidebar';
 import { DataViewModule } from 'primeng/dataview';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputTextModule } from 'primeng/inputtext';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   imports: [
@@ -14,13 +16,17 @@ import { InputTextModule } from 'primeng/inputtext';
     SidebarModule,
     DataViewModule,
     RadioButtonModule,
-    InputTextModule
+    InputTextModule,
+    CheckboxModule,
+    ButtonModule
   ],
   exports: [
     ToolbarModule,
     SidebarModule,
     DataViewModule,
-    RadioButtonModule
+    RadioButtonModule,
+    CheckboxModule,
+    ButtonModule
   ],
   declarations: []
 })
