@@ -1,4 +1,4 @@
-<div class="ui-widget">
+<div class="ui-widget ui-g test">
 
   <div class="ui-g">
     <button class="back-button" type="button" (click)="back()"><i class="fas fa-arrow-left"></i></button>
@@ -9,7 +9,7 @@
     <div class="ui-g-12 ui-md-3 form-field">
       <label for=""><strong>Nome</strong></label>
       <div class="ui-inputgroup">
-        <input type="text" pInputText />
+        <input type="text" pInputText [(ngModel)]="nomeItem" />
       </div>
     </div>
     <div class="ui-g-12 ui-md-3">
@@ -32,7 +32,7 @@
     <div class="ui-g-12 ui-md-3 form-field">
       <label for=""><strong>Quantidade</strong></label>
       <div class="ui-inputgroup">
-        <input type="text" pInputText>
+        <input type="text" pInputText [(ngModel)]="quantidadeItem" />
         <span class="ui-inputgroup-addon">{{ unidadeMedida || "-" }}</span>
       </div>
     </div>
@@ -40,7 +40,7 @@
       <label for=""><strong>Preço</strong></label>
       <div class="ui-inputgroup">
         <span class="ui-inputgroup-addon">R$</span>
-        <input type="number" pInputText />
+        <input type="number" pInputText [(ngModel)]="precoItem" />
       </div>
     </div>
     <div class="ui-g-12 ui-md-3 form-field">
@@ -50,23 +50,81 @@
     <div class="ui-g-12 ui-md-3 form-field">
       <label for=""><strong>Data de Validade</strong></label>
       <div class="ui-inputgroup">
-        <input type="date" pInputText [disabled]="!perecivel"/>
+        <input type="date" pInputText [disabled]="!perecivel" [(ngModel)]="dataValidadeItem" />
       </div>
     </div>
     <div class="ui-g-12 ui-md-3 form-field">
       <label for=""><strong>Data de Fabricação</strong></label>
       <div class="ui-inputgroup">
-        <input type="date" pInputText />
+        <input type="date" pInputText [(ngModel)]="dataFabricacaoItem" />
       </div>
     </div>
+
   </div>
 
   <div class="button-group">
-    <button pButton type="button" (click)="back()" label="Cadastrar"></button>
+    <button pButton type="button" (click)="cadastraItem()" label="Cadastrar"></button>
     <button pButton class="ui-button-secondary" type="button" (click)="back()" label="Cancelar"></button>
   </div>
 
 </div>
+
+    <!-- <form [formGroup]="itemForm">
+      <div class="ui-g-12 ui-md-3 form-field">
+        <label for=""><strong>Nome</strong></label>
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="nome" />
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3">
+        <label for=""><strong>Unidade de Medida</strong></label>
+        <div class="ui-g radiobuttons">
+          <div class="ui-g">
+            <p-radioButton name="group1" value="lt" [(ngModel)]="unidadeMedida"></p-radioButton>
+            <label class="ui-widget">Litro</label>
+          </div>
+          <div class="ui-g">
+            <p-radioButton name="group2" value="kg" [(ngModel)]="unidadeMedida"></p-radioButton>
+            <label class="ui-widget">Quilograma</label>
+          </div>
+          <div class="ui-g">
+            <p-radioButton name="group3" value="und" [(ngModel)]="unidadeMedida"></p-radioButton>
+            <label class="ui-widget">Unidade</label>
+          </div>
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3 form-field">
+        <label for=""><strong>Quantidade</strong></label>
+        <div class="ui-inputgroup">
+          <input type="text" pInputText formControlName="quantidade" />
+          <span class="ui-inputgroup-addon">{{ unidadeMedida || "-" }}</span>
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3 form-field">
+        <label for=""><strong>Preço</strong></label>
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon">R$</span>
+          <input type="number" pInputText formControlName="preco" />
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3 form-field">
+        <label for=""><strong>Perecível</strong></label>
+        <p-checkbox [(ngModel)]="perecivel" binary="true"></p-checkbox>
+      </div>
+      <div class="ui-g-12 ui-md-3 form-field">
+        <label for=""><strong>Data de Validade</strong></label>
+        <div class="ui-inputgroup">
+          <input type="date" pInputText [disabled]="!perecivel" formControlName="dataValidade" />
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3 form-field">
+        <label for=""><strong>Data de Fabricação</strong></label>
+        <div class="ui-inputgroup">
+          <input type="date" pInputText formControlName="dataFabricacao" />
+        </div>
+      </div>
+
+    </form> -->
 
 
 

@@ -9,16 +9,19 @@ export class ItemService {
 
   constructor() { }
 
-  carregaListaItens(lista: any[]) {
+  carregaListaItens() {
+    debugger
     const listaAtual = this.getListaLocalStorage();
 
-    if (listaAtual) {
-      lista = listaAtual;
-    }
+    return listaAtual;
+
+    // if (listaAtual) {
+    //   lista = listaAtual;
+    // }
   }
 
   salvarItem(item: Item): void {
-    const listaLocal: Item[] = JSON.parse(localStorage.getItem('listaItens'));
+    const listaLocal: Item[] = JSON.parse(localStorage.getItem('listaItens')) || [];
 
     if (item) {
       listaLocal.push(item);

@@ -18,7 +18,7 @@ export class ItemListComponent implements OnInit {
 
   ngOnInit() {
     this.itens = [];
-    this.service.carregaListaItens(this.itens);
+    this.itens = this.service.carregaListaItens();
     console.log(this.itens);
   }
 

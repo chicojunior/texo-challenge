@@ -8,7 +8,7 @@ export class Item {
   constructor() {}
 
   nomeItem: string;
-  unidadeDeMedida: UnidadeMedida;
+  unidadeDeMedida: string;
   quantidade: number;
   preco: number;
   perecivel: boolean;

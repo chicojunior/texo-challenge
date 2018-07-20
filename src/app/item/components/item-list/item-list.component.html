@@ -1,10 +1,10 @@
 
-<div class="ui-widget ui-g">
+<div class="ui-widget ui-g test">
   <div class="ui-g-6">
     <h3>Lista de Itens</h3>
   </div>
   <div class="ui-g-6">
-    <button pButton type="button" (click)="addItem()">Novo Item</button>
+    <button pButton type="button" (click)="addItem()" label="Novo Item"></button>
   </div>
 </div>
 
@@ -39,7 +39,7 @@
             </div>
             <div class="ui-g">
               <div class="ui-g-2 ui-sm-4">Data de Fabricação: </div>
-              <div class="ui-g-8 ui-sm-4"><b>{{item.dataFabricacao}}</b></div>
+              <div class="ui-g-8 ui-sm-4"><b>{{ item.dataFabricacao | date: 'dd/MM/yyyy' }}</b></div>
             </div>
             <div class="ui-g">
               <div class="ui-g-2 ui-sm-4">Preço: </div>
@@ -47,13 +47,7 @@
             </div>
           </div>
           <div class="ui-g-12 ui-md-2 search-icon">
-            <button
-              pButton
-              type="button"
-              icon="pi pi-search"
-              (click)="selectCar($event, car)">
-              Editar
-            </button>
+            <button pButton type="button" icon="pi pi-pencil" (click)="selectCar($event, car)" label="Editar"></button>
           </div>
       </div>
   </ng-template>
