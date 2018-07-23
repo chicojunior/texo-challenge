@@ -10,7 +10,6 @@ export class ItemService {
   constructor() { }
 
   carregaListaItens() {
-    debugger
     const listaAtual = this.getListaLocalStorage();
 
     return listaAtual;
